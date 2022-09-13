@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Calculate</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .btn{
+            background-color:rgb(98, 255, 93); 
+            color: rgb(0, 0, 0);
+            border:1px solid black; 
+            border-radius:5px;  
+            height: 40px; 
+            width: 100%;  
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        .btn:hover{
+          cursor: pointer;
+          background-color: rgb(160, 250, 142);
+        }
+        #bg{
+          background-color: rgb(166, 218, 252);
+          padding: 20px;
+          border-radius: 7px;
+          border: 2px solid black;
+          width: 450px;
+        }
+        .text{
+            /* height: 30px;
+            width: 80%; */
+            background-color:rgb(226, 231, 226); 
+            color: rgb(0, 0, 0);
+            border:1px solid black; 
+            border-radius:5px;  
+            height: 35px; 
+            width: 100%;  
+            margin-top: 10px;
+        }
+        .calculated{
+            background-color:rgb(248, 181, 142); 
+            color: rgb(0, 0, 0);
+            border-radius:5px;  
+            /* width: 100%;   */
+            margin-top: 10px; 
+            font-size: 18px;
+            padding-left: 10px;
+            font-weight: 540;
+        }
+    </style>
+    <script>
+        function claculatesalary(){
+            let name=document.getElementById("name").value;
+            let id=parseInt(document.getElementById("id1").value);
+            let sal=parseInt(document.getElementById("salary").value);
+            
+            if(sal>=10000 && sal<=20000){
+                da_in_per=0;
+                hra_in_per=5;
+                da_in_rs=da_in_per*sal/100;
+                hra_in_rs=hra_in_per*sal/100;
+                gross_salary=da_in_rs+hra_in_rs+sal;
+                document.getElementById("f3").innerHTML ="<br/> Employe Name is :"+ name;
+                document.getElementById("f2").innerHTML ="<br/> Employe Id is :"+ id;
+                document.getElementById("f4").innerHTML ="<br/> Employe Basics salary is :"+ sal;
+                document.getElementById("f5").innerHTML ="<br/> Employe Da in percentage is :"+ da_in_per +"%";
+                document.getElementById("f6").innerHTML ="<br/> Employe hra in percentage is :"+ hra_in_per +"%";
+                document.getElementById("f7").innerHTML ="<br/> Employe Da in Rupees is :"+ da_in_rs +"rs";
+                document.getElementById("f8").innerHTML ="<br/> Employe hra in Rupees is :"+ hra_in_rs +"rs";
+                document.getElementById("f9").innerHTML ="<br/> Employe Gross salary is :"+ gross_salary +"rs";
+            }
+            else if(sal>20000 && sal<=30000){
+                da_in_per=5;
+                hra_in_per=5;
+                da_in_rs=da_in_per*sal/100;
+                hra_in_rs=hra_in_per*sal/100;
+                gross_salary=da_in_rs+hra_in_rs+sal;
+                document.getElementById("f3").innerHTML ="<br/> Employe Name is :"+ name;
+                document.getElementById("f2").innerHTML ="<br/> Employe Id is :"+ id;
+                document.getElementById("f4").innerHTML ="<br/> Employe Basics salary is :"+ sal;
+                document.getElementById("f5").innerHTML ="<br/> Employe Da in percentage is :"+ da_in_per +"%";
+                document.getElementById("f6").innerHTML ="<br/> Employe hra in percentage is :"+ hra_in_per +"%";
+                document.getElementById("f7").innerHTML ="<br/> Employe Da in Rupees is :"+ da_in_rs +"rs";
+                document.getElementById("f8").innerHTML ="<br/> Employe hra in Rupees is :"+ hra_in_rs +"rs";
+                document.getElementById("f9").innerHTML ="<br/> Employe Gross salary is :"+ gross_salary +"rs";
+
+            }
+            else if(sal>30000 && sal<=40000){
+                da_in_per=5;
+                hra_in_per=10;
+                da_in_rs=da_in_per*sal/100;
+                hra_in_rs=hra_in_per*sal/100;
+                gross_salary=da_in_rs+hra_in_rs+sal;
+                document.getElementById("f3").innerHTML ="<br/> Employe Name is :"+ name;
+                document.getElementById("f2").innerHTML ="<br/> Employe Id is :"+ id;
+                document.getElementById("f4").innerHTML ="<br/> Employe Basics salary is :"+ sal;
+                document.getElementById("f5").innerHTML ="<br/> Employe Da in percentage is :"+ da_in_per +"%";
+                document.getElementById("f6").innerHTML ="<br/> Employe hra in percentage is :"+ hra_in_per +"%";
+                document.getElementById("f7").innerHTML ="<br/> Employe Da in Rupees is :"+ da_in_rs +"rs";
+                document.getElementById("f8").innerHTML ="<br/> Employe hra in Rupees is :"+ hra_in_rs +"rs";
+                document.getElementById("f9").innerHTML ="<br/> Employe Gross salary is :"+ gross_salary +"rs";
+            }
+            else if(sal>40000 && sal<=50000){
+                da_in_per=10;
+                hra_in_per=10;
+                da_in_rs=da_in_per*sal/100;
+                hra_in_rs=hra_in_per*sal/100;
+                gross_salary=da_in_rs+hra_in_rs+sal;
+                document.getElementById("f3").innerHTML ="<br/> Employe Name is :"+ name;
+                document.getElementById("f2").innerHTML ="<br/> Employe Id is :"+ id;
+                document.getElementById("f4").innerHTML ="<br/> Employe Basics salary is :"+ sal;
+                document.getElementById("f5").innerHTML ="<br/> Employe Da in percentage is :"+ da_in_per +"%";
+                document.getElementById("f6").innerHTML ="<br/> Employe hra in percentage is :"+ hra_in_per +"%";
+                document.getElementById("f7").innerHTML ="<br/> Employe Da in Rupees is :"+ da_in_rs +"rs";
+                document.getElementById("f8").innerHTML ="<br/> Employe hra in Rupees is :"+ hra_in_rs +"rs";
+                document.getElementById("f9").innerHTML ="<br/> Employe Gross salary is :"+ gross_salary +"rs";
+            }
+            else if(sal>50000){
+                da_in_per=15;
+                hra_in_per=20;
+                da_in_rs=da_in_per*sal/100;
+                hra_in_rs=hra_in_per*sal/100;
+                gross_salary=da_in_rs+hra_in_rs+sal;
+                document.getElementById("f3").innerHTML ="<br/> Employe Name is :"+ name;
+                document.getElementById("f2").innerHTML ="<br/> Employe Id is :"+ id;
+                document.getElementById("f4").innerHTML ="<br/> Employe Basics salary is :"+ sal;
+                document.getElementById("f5").innerHTML ="<br/> Employe Da in percentage is :"+ da_in_per +"%";
+                document.getElementById("f6").innerHTML ="<br/> Employe hra in percentage is :"+ hra_in_per +"%";
+                document.getElementById("f7").innerHTML ="<br/> Employe Da in Rupees is :"+ da_in_rs +"rs";
+                document.getElementById("f8").innerHTML ="<br/> Employe hra in Rupees is :"+ hra_in_rs +"rs";
+                document.getElementById("f9").innerHTML ="<br/> Employe Gross salary is :"+ gross_salary +"rs";
+            }
+            else {
+                document.getElementById("f9").innerHTML ="<br/> Invalid Input";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="bg">
+        <input type="text" placeholder="Enter Employee Name" id="name" class="text"><br>
+        <input type="text" placeholder="Enter Employee ID" id="id1" class="text"><br>
+        <input type="text" placeholder="Enter Employee Basic Salary" id="salary" class="text"><br>
+        <input type="submit" value="Calculate Salary" onclick="claculatesalary()" class="btn">
+        <div id="f1" class="calculated"></div>
+        <div id="f3" class="calculated"></div>
+        <div id="f2" class="calculated"></div>
+        <div id="f4" class="calculated"></div>
+        <div id="f5" class="calculated"></div>
+        <div id="f6" class="calculated"></div>
+        <div id="f7" class="calculated"></div>
+        <div id="f8" class="calculated"></div>
+        <div id="f9" class="calculated"></div>
+        <div id="f0" class="calculated"></div>
+    </div>
+</body>
+</html>
